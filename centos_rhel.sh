@@ -1,5 +1,5 @@
 #!/bin/sh
-yum install -y epel-release sudo wget git kbd vim strace ltrace git net-tools lsof python2-pip python34-pip dkms make bzip2 curl bind-utils openssh bmon nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap-ncat parallel sed grep sqlite ftp tzdata vconfig python-virtualenv python-virtualenvwrapper
+yum install -y epel-release sudo wget git kbd vim strace ltrace git net-tools lsof python2-pip python34-pip dkms make bzip2 curl bind-utils openssh bmon nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap-ncat parallel sed grep sqlite ftp tzdata vconfig python-virtualenv python-virtualenvwrapper postgresql-devel libpcap-devel python36 python36-devel
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
