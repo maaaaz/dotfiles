@@ -1,6 +1,6 @@
 #!/bin/sh
 apt update
-apt install -y sudo wget mlocate git kbd vim strace ltrace git net-tools lsof python-pip python3-pip dkms make bzip2 curl dnsutils openssh-server openssh-client bmon nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap parallel sed grep sqlite3 ftp tzdata vlan python-virtualenv virtualenvwrapper libpq-dev libpcap-dev python3 python3.7 python3-dev
+apt install -y sudo wget mlocate git kbd vim strace ltrace git net-tools lsof python-pip python3-pip dkms make bzip2 curl dnsutils openssh-server openssh-client bmon nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap parallel sed grep sqlite3 ftp tzdata vlan python-virtualenv virtualenvwrapper libpq-dev libpcap-dev libssl-dev python3 python3-dev
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
