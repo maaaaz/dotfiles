@@ -1,5 +1,11 @@
 #!/bin/sh
-yum install -y epel-release sudo wget git kbd vim vim-common strace ltrace git net-tools lsof python2-pip python34-pip dkms make bzip2 curl bind-utils openssh bmon nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap-ncat parallel sed grep sqlite ftp tzdata vconfig python-virtualenv python-virtualenvwrapper postgresql-devel libpcap-devel python36 python36-devel colordiff findutils nfs-utils ntfs-3g pigz freerdp xrdp samba samba-client cifs-utils openssl subversion tar telnet tcpdump wireshark traceroute usbutils whois xz
+yum check-update
+yum install -y epel-release
+yum check-update
+yum install -y sudo wget git kbd vim vim-common strace ltrace git net-tools lsof python2-pip python3-pip dkms make bzip2 curl bind-utils openssh nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap-ncat parallel sed grep sqlite ftp tzdata python3-virtualenv postgresql-devel python36 python36-devel colordiff findutils nfs-utils ntfs-3g pigz freerdp xrdp samba samba-client cifs-utils openssl subversion tar telnet tcpdump wireshark traceroute usbutils whois xz
+
+# some missing packages from CentOS 8 but that might exist elsewhere
+yum install -y bmon vconfig python-virtualenvwrapper python3-virtualenvwrapper libpcap-devel libpcap
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
