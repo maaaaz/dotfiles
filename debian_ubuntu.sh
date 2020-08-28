@@ -25,3 +25,6 @@ ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
 # cleaning apt caches
 apt autoclean && apt clean
+
+# disabling unused services
+systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl disable rpcbind && systemctl disable rpcbind.socket
