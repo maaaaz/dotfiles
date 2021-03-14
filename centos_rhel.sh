@@ -35,9 +35,8 @@ ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 yum clean all
 
 # disabled ununsed services
-systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl disable rpcbind && systemctl disable rpcbind.socket
-systemctl stop postfix && systemctl disable postfix
-systemctl stop chronyd && systemctl disable chronyd
-systemctl stop dnsmasq && systemctl disable dnsmasq
-systemctl stop avahi-daemon.socket avahi-daemon.service
-systemctl disable avahi-daemon.socket avahi-daemon.service
+systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl mask rpcbind && systemctl mask rpcbind.socket
+systemctl stop postfix && systemctl mask postfix
+systemctl stop chronyd && systemctl mask chronyd
+systemctl stop dnsmasq && systemctl mask dnsmasq
+systemctl stop avahi-daemon.socket avahi-daemon.service && systemctl mask avahi-daemon.socket avahi-daemon.service

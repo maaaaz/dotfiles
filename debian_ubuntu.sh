@@ -28,4 +28,5 @@ ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 apt autoclean && apt clean
 
 # disabling unused services
-systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl disable rpcbind && systemctl disable rpcbind.socket
+systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl mask rpcbind && systemctl mask rpcbind.socket
+systemctl stop xrdp && systemctl mask xrdp
