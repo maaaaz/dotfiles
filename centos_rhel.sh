@@ -2,10 +2,10 @@
 yum check-update
 yum install -y epel-release
 yum check-update
-yum install -y sudo wget git kbd vim vim-common strace ltrace git net-tools lsof python2-pip python3-pip dkms make bzip2 curl bind-utils openssh nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap-ncat parallel sed grep sqlite ftp tzdata python3-virtualenv postgresql-devel python36 python36-devel colordiff findutils nfs-utils ntfs-3g pigz freerdp xrdp samba samba-client cifs-utils openssl pv subversion tar telnet tcpdump wireshark traceroute usbutils whois xz showmount
+yum install -y sudo wget git kbd vim vim-common strace ltrace git net-tools lsof python2-pip python3-pip dkms make bzip2 curl bind-utils openssh nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap-ncat parallel sed grep sqlite ftp tzdata python3-virtualenv postgresql-devel policycoreutils-python python36 python36-devel colordiff findutils nfs-utils ntfs-3g pigz freerdp xrdp samba samba-client cifs-utils openssl pv subversion tar telnet tcpdump wireshark traceroute usbutils whois xz showmount
 
 # some missing packages from CentOS 8 but that might exist elsewhere
-yum install -y bmon vconfig python-virtualenvwrapper python3-virtualenvwrapper libpcap-devel libpcap
+yum install -y bmon vconfig python-virtualenvwrapper python3-virtualenvwrapper libpcap-devel libpcap policycoreutils-python-utils
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
@@ -19,7 +19,7 @@ pip3 install csvkit pyinstaller
 
 # set up virtualenvwrapper
 grep -i 'workon_home' ~/.bashrc ||  echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc
-grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 # install vmware tools
 yum install -y unzip patch gcc glibc-headers kernel-devel "kernel-devel-uname-r == $(uname -r)" kernel-headers perl fuse
@@ -36,3 +36,8 @@ yum clean all
 
 # disabled ununsed services
 systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl disable rpcbind && systemctl disable rpcbind.socket
+systemctl stop postfix && systemctl disable postfix
+systemctl stop chronyd && systemctl disable chronyd
+systemctl stop dnsmasq && systemctl disable dnsmasq
+systemctl stop avahi-daemon.socket avahi-daemon.service
+systemctl disable avahi-daemon.socket avahi-daemon.service
