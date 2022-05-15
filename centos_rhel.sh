@@ -28,8 +28,8 @@ grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /bin/virtualenvwrapper
 
 # install vmware tools
 yum install -y unzip patch gcc glibc-headers kernel-devel "kernel-devel-uname-r == $(uname -r)" kernel-headers perl fuse
-yum install open-vm-tools &&\
-echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,allow_other    0       0" >> /etc/fstab
+yum install -y open-vm-tools &&\
+echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,auto,nofail,allow_other    0       0" >> /etc/fstab
 
 # setting timezone
 rm /etc/localtime

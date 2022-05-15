@@ -21,8 +21,8 @@ grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /usr/share/virtualenvw
 
 # install vmware tools and setup shared folder
 apt install -y build-essential unzip patch gcc linux-headers-$(uname -r) perl psmisc zip fuse
-apt install open-vm-tools &&\
-echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,allow_other    0       0" >> /etc/fstab
+apt install -y open-vm-tools &&\
+echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,auto,nofail,allow_other    0       0" >> /etc/fstab
 
 # setting timezone
 rm /etc/localtime
