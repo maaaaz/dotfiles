@@ -10,6 +10,11 @@ yum install -y bmon vconfig python-virtualenvwrapper python3-virtualenvwrapper l
 # set permanently the keyboard mapping
 localectl set-keymap fr
 
+# customizing bashrc
+echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
+echo 'eval "`dircolors`"' >> ~/.bashrc
+echo alias ls='ls $LS_OPTIONS' >> ~/.bashrc
+
 # upgrade pip and install cool modules
 pip install --upgrade pip
 pip install csvkit pyinstaller
@@ -23,9 +28,8 @@ grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /bin/virtualenvwrapper
 
 # install vmware tools
 yum install -y unzip patch gcc glibc-headers kernel-devel "kernel-devel-uname-r == $(uname -r)" kernel-headers perl fuse
-cd /opt 
-git clone https://github.com/rasa/vmware-tools-patches.git &&\
-cd vmware-tools-patches && ./setup.sh && ./download-tools.sh latest && ./untar-and-patch-and-compile.sh
+yum install open-vm-tools &&\
+echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,allow_other    0       0" >> /etc/fstab
 
 # setting timezone
 rm /etc/localtime
