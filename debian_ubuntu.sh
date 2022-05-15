@@ -12,13 +12,12 @@ pip3 install csvkit pyinstaller
 # set up virtualenvwrapper
 grep -i 'workon_home' ~/.bashrc ||  echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc
 grep -i 'virtualenvwrapper_python' ~/.bashrc || echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc
-grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.bashrc
 
-# install vmware tools
+# install vmware tools and setup shared folder
 apt install -y build-essential unzip patch gcc linux-headers-$(uname -r) perl psmisc zip fuse
-cd /opt 
-git clone https://github.com/rasa/vmware-tools-patches.git &&\
-cd vmware-tools-patches && ./setup.sh && ./download-tools.sh latest && ./untar-and-patch-and-compile.sh
+apt install open-vm-tools &&\
+echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,allow_other    0       0" >> /etc/fstab
 
 # setting timezone
 rm /etc/localtime
