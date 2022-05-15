@@ -5,6 +5,11 @@ apt install -y sudo wget mlocate git kbd vim strace ltrace git net-tools lsof py
 # set permanently the keyboard mapping
 localectl set-keymap fr
 
+# customizing bashrc
+echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
+echo 'eval "`dircolors`"' >> ~/.bashrc
+echo \'alias ls='ls $LS_OPTIONS'\' >> ~/.bashrc 
+
 # upgrade pip and install cool modules
 pip2 install csvkit pyinstaller
 pip3 install csvkit pyinstaller
