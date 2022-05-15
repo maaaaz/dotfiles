@@ -8,7 +8,7 @@ localectl set-keymap fr
 # customizing bashrc
 echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
 echo 'eval "`dircolors`"' >> ~/.bashrc
-echo \'alias ls='ls $LS_OPTIONS'\' >> ~/.bashrc 
+echo alias ls='ls $LS_OPTIONS' >> ~/.bashrc 
 
 # upgrade pip and install cool modules
 pip2 install csvkit pyinstaller
@@ -34,3 +34,4 @@ apt autoclean && apt clean
 # disabling unused services
 systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl mask rpcbind && systemctl mask rpcbind.socket
 systemctl stop xrdp && systemctl mask xrdp
+systemctl stop systemd-resolved.service && systemctl mask systemd-resolved.service
