@@ -33,9 +33,11 @@ packaging
 pandas
 paramiko
 passlib
+pbkdf2
 pcapy
 pyasn1
 pycryptodome
+PyPDF2
 pywerview
 requests
 scrypt
@@ -43,6 +45,7 @@ termcolor
 urllib3
 validators
 vulners
+waybackpy
 winacl
 w3lib
 XlsxWriter
