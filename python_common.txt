@@ -4,6 +4,7 @@ beautifulsoup4
 bloodhound
 chardet
 dnspython
+eml_parser
 filemagic
 Flask
 future
