@@ -3,6 +3,7 @@ bcrypt
 beautifulsoup4
 bloodhound
 chardet
+csvkit
 dnspython
 eml_parser
 filemagic
@@ -31,5 +32,7 @@ pywerview
 requests
 scrypt
 urllib3
+validators
 vulners
+w3lib
 XlsxWriter
