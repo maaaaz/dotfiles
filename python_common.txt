@@ -25,7 +25,7 @@ lxml
 markdownify
 minidump
 minikerberos
-mslap
+msldap
 networkx
 nmaptocsv
 webscreenshot
