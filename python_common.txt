@@ -34,9 +34,11 @@ pandas
 paramiko
 passlib
 pbkdf2
+px-proxy
 pyasn1
 pycryptodome
 PyPDF2
+pyinstaller
 pywerview
 requests
 scrypt

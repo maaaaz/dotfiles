@@ -2,10 +2,10 @@
 yum check-update
 yum install -y epel-release
 yum check-update
-yum install -y sudo wget git kbd vim vim-common strace ltrace git net-tools lsof python3 python2-pip python3-pip python3-virtualenv dkms make bzip2 curl bind-utils openssh nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap-ncat parallel sed grep sqlite ftp tzdata postgresql-devel policycoreutils-python python36 python36-devel colordiff findutils nfs-utils ntfs-3g pigz freerdp xrdp samba samba-client cifs-utils openssl pv subversion tar telnet tcpdump wireshark traceroute usbutils whois xz showmount openldap-clients
+yum install -y $(cat "./centos_rhel_packages.txt")
 
 # some missing packages from CentOS 8 but that might exist elsewhere
-yum install -y bmon vconfig python-virtualenvwrapper python3-virtualenvwrapper libpcap-devel libpcap policycoreutils-python-utils
+yum install -y vconfig python-virtualenvwrapper python3-virtualenvwrapper
 
 # set permanently the keyboard mapping
 localectl set-keymap fr

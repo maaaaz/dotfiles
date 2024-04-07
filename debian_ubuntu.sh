@@ -1,6 +1,6 @@
 #!/bin/sh
 apt update
-apt install -y sudo wget mlocate git kbd vim strace ltrace git net-tools lsof python3-pip dkms make bzip2 curl dnsutils openssh-server openssh-client bmon nmon htop gzip coreutils dos2unix util-linux iptables jq less nmap parallel sed grep sqlite3 ftp tzdata vlan python3-virtualenv virtualenvwrapper libpq-dev libpcap-dev libssl-dev python3 python3-dev xxd colordiff findutils zutils nfs-common ntfs-3g pigz xrdp cifs-utils smbclient openssl pv subversion tar telnet tcpdump tshark traceroute vbindiff usbutils whois xz-utils ldap-utils
+apt install -y $(cat "./debian_ubuntu_packages.txt")
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
@@ -20,7 +20,7 @@ grep -i 'virtualenvwrapper_python' ~/.bashrc || echo 'export VIRTUALENVWRAPPER_P
 grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.bashrc
 
 # install vmware tools and setup shared folder
-apt install -y build-essential unzip patch gcc linux-headers-$(uname -r) perl psmisc zip fuse
+apt install -y build-essential unzip patch gcc linux-headers-$(uname -r) perl psmisc zip fuse3
 apt install -y open-vm-tools &&\
 echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,auto,nofail,allow_other    0       0" >> /etc/fstab
 
