@@ -26,6 +26,7 @@ grep
 gzip
 hexyl
 htop
+hyperv-daemons
 inotify-tools
 iptables
 jhead
@@ -43,7 +44,6 @@ libssl-dev
 lsof
 ltrace
 make
-mlocate
 mtools
 net-tools
 nfs-common

@@ -2,6 +2,9 @@
 apt update
 apt install -y $(cat "./debian_ubuntu_packages.txt")
 
+# packages that do not exist in every debian-based distros (for instance: kali)
+apt install -y mlocate
+
 # set permanently the keyboard mapping
 localectl set-keymap fr
 

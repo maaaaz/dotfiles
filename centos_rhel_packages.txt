@@ -26,6 +26,7 @@ glibc-headers
 grep
 gzip
 htop
+hyperv-daemons
 inotify-tools
 iptables
 jhead
