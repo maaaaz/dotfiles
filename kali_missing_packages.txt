@@ -50,7 +50,6 @@ fuse
 g++-mingw-w64
 gdb
 gdbserver
-geany
 ghex
 gnuplot
 gocr
