@@ -152,7 +152,6 @@ wireshark
 wvdial
 xfsprogs
 xpdf
-xprobe2
 xspy
 xsser
 xxd
