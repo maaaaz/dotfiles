@@ -46,7 +46,7 @@ flex
 florence
 foremost
 fragrouter
-fuse
+fuse3
 g++-mingw-w64
 gdb
 gdbserver
