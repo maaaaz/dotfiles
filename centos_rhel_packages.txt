@@ -37,7 +37,9 @@ kernel-devel
 kernel-headers
 krb5-admin-server
 krb5-kdc
+krb5-libs
 krb5-user
+krb5-workstation
 less
 libpcap
 libpcap-devel
