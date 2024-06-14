@@ -39,6 +39,8 @@ krb5-kdc
 krb5-user
 ldap-utils
 less
+libbde-utils
+libfvde-utils
 libkrb5-dev
 libpcap-dev
 libpq-dev
