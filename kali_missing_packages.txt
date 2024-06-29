@@ -102,6 +102,7 @@ proxychains
 pst-utils
 python3-pypff
 qbittorrent
+qbittorrent-nox
 qpdf
 radare2
 rainbowcrack
