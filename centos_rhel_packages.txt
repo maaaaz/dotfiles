@@ -58,6 +58,7 @@ open-vm-tools
 openldap-clients
 openssh
 openssl
+openssl-devel
 parallel
 patch
 perl
