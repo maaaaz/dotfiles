@@ -23,7 +23,6 @@ fuse3
 gcc
 gdb
 git
-git
 grep
 guestmount
 gzip
@@ -33,7 +32,6 @@ hyperv-daemons
 inotify-tools
 iptables
 jhead
-jq
 jq
 kbd
 krb5-admin-server
