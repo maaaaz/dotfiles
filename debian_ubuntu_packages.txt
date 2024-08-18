@@ -1,4 +1,5 @@
 archivemount
+aria2
 bmon
 build-essential
 bzip2
