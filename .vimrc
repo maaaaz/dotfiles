@@ -1,7 +1,7 @@
 "-----------------------------------------------------------
 "                      user interface
 "-----------------------------------------------------------
-colorscheme delek
+colorscheme evening
 set syntax=c
 syntax on
 set number
