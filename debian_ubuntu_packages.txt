@@ -1,3 +1,6 @@
+apfsprogs
+apfs-dkms
+apfs-fuse
 archivemount
 aria2
 bmon
