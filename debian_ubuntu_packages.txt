@@ -107,6 +107,7 @@ vim
 virtualenvwrapper
 vlan
 wget
+wget2
 whois
 wireguard
 xrdp
