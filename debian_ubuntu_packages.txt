@@ -73,6 +73,7 @@ python3-pip
 python3-virtualenv
 p7zip-full
 qpdf
+rar
 rclone
 rdiff
 rdiff-backup
@@ -99,6 +100,7 @@ tmux
 traceroute
 tshark
 tzdata
+unrar
 unzip
 usbutils
 util-linux
