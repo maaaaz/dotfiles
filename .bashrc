@@ -9,8 +9,8 @@
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors)"
 alias ls='ls $LS_OPTIONS'
-alias ll='ls $LS_OPTIONS -l'
-alias lll='ls $LS_OPTIONS -alh'
+alias ll='ls $LS_OPTIONS -l --time-style=long-iso'
+alias lll='ls $LS_OPTIONS -alh --time-style=long-iso'
 alias l='ls $LS_OPTIONS -lA'
 alias la='ls -A'
 
