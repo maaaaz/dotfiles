@@ -50,6 +50,7 @@ libssl-dev
 lsof
 ltrace
 make
+moreutils
 mtools
 net-tools
 nfs-common
