@@ -11,8 +11,10 @@ curl
 ddrescue
 debianutils
 diffutils
+dislocker
 dnsutils
 dos2unix
+dufs
 e2fsprogs
 ethtool
 findutils
@@ -21,12 +23,15 @@ git
 gpgv
 grep
 gzip
+hdparm
 htop
 inetutils
+iotop
 iperf3
 jq
 ldd
 less
+libbde-utils
 lsof
 ltrace
 make
