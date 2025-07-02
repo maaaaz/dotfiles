@@ -1,5 +1,6 @@
 apt
 aria2
+axel
 bash
 bash-completion
 binutils
@@ -64,6 +65,7 @@ util-linux
 vbindiff
 vim
 wget
+wget2
 whois
 xxd
 xz-utils
