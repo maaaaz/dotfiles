@@ -55,6 +55,7 @@ python
 python-pip
 qbittorrent-nox
 sed
+smartmontools
 socat
 strace
 tar
