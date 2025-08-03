@@ -2,6 +2,8 @@
 "                      user interface
 "-----------------------------------------------------------
 colorscheme evening
+set visualbell 
+set t_vb=
 set syntax=c
 syntax on
 set number
