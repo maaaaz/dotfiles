@@ -67,8 +67,8 @@ if [ "$color_prompt" = yes ]; then
     # override default virtualenv indicator in prompt
     VIRTUAL_ENV_DISABLE_PROMPT=1
 
-    prompt_color='\[\033[;94m\]'
-    info_color='\[\033[1;31m\]'
+    prompt_color='\[\033[1;36m\]'
+    info_color='\[\033[1;32m\]'
     prompt_symbol=@
 
     if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
@@ -130,10 +130,16 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -l'
-alias lll='ls -alh'
+#alias ll='ls -l'
+#alias lll='ls -alh'
+#alias la='ls -A'
+#alias l='ls -CF'
+
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l --time-style=long-iso'
+alias lll='ls $LS_OPTIONS -alh --time-style=long-iso'
+alias l='ls $LS_OPTIONS -lA'
 alias la='ls -A'
-alias l='ls -CF'
 
 alias rm='rm -i'
 alias cp='cp -i'
