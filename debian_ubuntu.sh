@@ -35,6 +35,8 @@ ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 apt autoclean && apt clean
 
 # disabling unused services
-systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl mask rpcbind && systemctl mask rpcbind.socket
-systemctl stop xrdp && systemctl mask xrdp
-systemctl stop systemd-resolved.service && systemctl mask systemd-resolved.service
+SERVICES_TO_DISABLE="rpcbind.socket rpcbind xrdp systemd-resolved.service lvm2-monitor.service mdadm-shutdown.service rpcbind.service tor.service lvm2-lvmpolld.socket nfs-client.target remote-fs.target exim4-base.timer fstrim.timer lm-sensors.service"
+systemctl stop $SERVICES_TO_DISABLE
+systemctl mask $SERVICES_TO_DISABLE
+
+
