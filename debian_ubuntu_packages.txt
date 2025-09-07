@@ -2,6 +2,7 @@ apfsprogs
 apfs-dkms
 archivemount
 aria2
+axel
 bmon
 build-essential
 bzip2
@@ -29,9 +30,12 @@ grep
 guestmount
 gzip
 hexyl
+hdparm
 htop
 hyperv-daemons
+iftop
 inotify-tools
+ioping
 iptables
 jhead
 jq
@@ -54,6 +58,7 @@ moreutils
 mtools
 net-tools
 nfs-common
+ncat
 nmap
 nmon
 ntfs-3g
