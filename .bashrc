@@ -6,6 +6,7 @@
 # umask 022
 
 # You may uncomment the following lines if you want `ls' to be colorized:
+export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors)"
 alias ls='ls $LS_OPTIONS'
