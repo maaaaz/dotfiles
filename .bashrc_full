@@ -168,6 +168,7 @@ if ! shopt -oq posix; then
 fi
 [[ -e /etc/shellrc ]] && source /etc/shellrc
 
+alias dmesg='dmesg -T'
 alias dkill='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias dps='docker ps'
 alias dlogs='docker logs'
