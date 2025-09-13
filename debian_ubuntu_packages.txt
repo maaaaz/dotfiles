@@ -86,6 +86,7 @@ rclone
 rdiff
 rdiff-backup
 ripgrep
+rsyslog
 rzip
 secure-delete
 sed
