@@ -106,6 +106,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
+    export LS_OPTIONS='--color=auto'
+    eval "$(dircolors)"
 
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
@@ -165,6 +167,15 @@ if ! shopt -oq posix; then
   fi
 fi
 [[ -e /etc/shellrc ]] && source /etc/shellrc
+
+alias dkill='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+alias dps='docker ps'
+alias dlogs='docker logs'
+
+sstart () { systemctl start "$1" --no-pager -l && systemctl status "$1" --no-pager -l; }
+sstop () { systemctl stop "$1" --no-pager -l && systemctl status "$1" --no-pager -l; }
+srestart () { systemctl restart "$1" --no-pager -l && systemctl status "$1" --no-pager -l; }
+sstatus () { systemctl status "$1" --no-pager -l; }
 
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
