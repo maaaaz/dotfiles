@@ -14,7 +14,7 @@ echo 'eval "`dircolors`"' >> ~/.bashrc
 echo alias ls='ls $LS_OPTIONS' >> ~/.bashrc
 
 # upgrade pip and install cool modules
-pip install --upgrade pip virtualenvwrapper csvkit pyinstaller
+pip install -q --upgrade pip virtualenvwrapper csvkit pyinstaller
 
 # set up virtualenvwrapper
 grep -i 'workon_home' ~/.bashrc ||  echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc
