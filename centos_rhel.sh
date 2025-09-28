@@ -5,9 +5,6 @@ crb enable
 dnf check-update
 dnf install -y $(cat "./centos_rhel_packages.txt")
 
-# some missing packages from CentOS 8 but that might exist elsewhere
-dnf install -y vconfig python-virtualenvwrapper python3-virtualenvwrapper
-
 # set permanently the keyboard mapping
 localectl set-keymap fr
 
@@ -17,6 +14,8 @@ echo 'eval "`dircolors`"' >> ~/.bashrc
 echo alias ls='ls $LS_OPTIONS' >> ~/.bashrc
 
 # upgrade pip and install cool modules
+pip install virtualenvwrapper
+
 pip install --upgrade pip
 pip install csvkit pyinstaller
 
