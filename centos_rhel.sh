@@ -33,8 +33,6 @@ ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 dnf clean all
 
 # disabled ununsed services
-systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl mask rpcbind && systemctl mask rpcbind.socket
-systemctl stop postfix && systemctl mask postfix
-systemctl stop chronyd && systemctl mask chronyd
-systemctl stop dnsmasq && systemctl mask dnsmasq
-systemctl stop avahi-daemon.socket avahi-daemon.service && systemctl mask avahi-daemon.socket avahi-daemon.service
+SERVICES_TO_DISABLE="rpcbind.socket rpcbind rpcbind.service rpc-statd-notify.service xrdp systemd-resolved.service lvm2-monitor.service mdadm-shutdown.service tor.service lvm2-lvmpolld.socket nfs-client.target remote-fs.target exim4.service exim4-base.timer fstrim.timer lm-sensors.service tftpd-hpa.service postfix chronyd dnsmasq avahi-daemon.socket avahi-daemon.service"
+systemctl stop $SERVICES_TO_DISABLE
+systemctl mask $SERVICES_TO_DISABLE
