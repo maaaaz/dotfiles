@@ -3,7 +3,7 @@ dnf check-update
 dnf install -y epel-release
 crb enable
 dnf check-update
-dnf install -y $(cat "./centos_rhel_packages.txt")
+dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt")
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
