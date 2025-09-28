@@ -18,7 +18,7 @@ pip install --upgrade pip virtualenvwrapper csvkit pyinstaller
 
 # set up virtualenvwrapper
 grep -i 'workon_home' ~/.bashrc ||  echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc
-grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /bin/virtualenvwrapper.sh' >> ~/.bashrc
+grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 # install vmware tools
 dnf install -y unzip patch gcc glibc-headers kernel-devel "kernel-devel-uname-r == $(uname -r)" kernel-headers perl fuse3
