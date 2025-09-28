@@ -1,11 +1,12 @@
 #!/bin/sh
-yum check-update
-yum install -y epel-release
-yum check-update
-yum install -y $(cat "./centos_rhel_packages.txt")
+dnf check-update
+dnf install -y epel-release
+crb enable
+dnf check-update
+dnf install -y $(cat "./centos_rhel_packages.txt")
 
 # some missing packages from CentOS 8 but that might exist elsewhere
-yum install -y vconfig python-virtualenvwrapper python3-virtualenvwrapper
+dnf install -y vconfig python-virtualenvwrapper python3-virtualenvwrapper
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
@@ -27,16 +28,16 @@ grep -i 'workon_home' ~/.bashrc ||  echo 'export WORKON_HOME=~/.virtualenvs' >> 
 grep -i 'virtualenvwrapper.sh' ~/.bashrc ||  echo 'source /bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 # install vmware tools
-yum install -y unzip patch gcc glibc-headers kernel-devel "kernel-devel-uname-r == $(uname -r)" kernel-headers perl fuse3
-yum install -y open-vm-tools &&\
+dnf install -y unzip patch gcc glibc-headers kernel-devel "kernel-devel-uname-r == $(uname -r)" kernel-headers perl fuse3
+dnf install -y open-vm-tools &&\
 echo ".host:/PartageVM     $HOME/PartageVM    fuse.vmhgfs-fuse       defaults,auto,nofail,allow_other    0       0" >> /etc/fstab
 
 # setting timezone
 rm /etc/localtime
 ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
-# cleaning yum caches
-yum clean all
+# cleaning dnf caches
+dnf clean all
 
 # disabled ununsed services
 systemctl stop rpcbind.socket && systemctl stop rpcbind && systemctl mask rpcbind && systemctl mask rpcbind.socket
