@@ -6,14 +6,12 @@ cifs-utils
 colordiff
 coreutils
 curl
-dc3dd
 dcfldd
 dislocker
 dkms
 dmidecode
 dos2unix
 epel-release
-fd-find
 findutils
 fio
 freerdp
@@ -31,9 +29,7 @@ htop
 hyperv-daemons
 iftop
 inotify-tools
-ioping
 iptables
-jhead
 jq
 kbd
 kernel-devel
@@ -79,7 +75,6 @@ python3-devel
 python3-pip
 python3-virtualenv
 qpdf
-rclone
 rdiff-backup
 ripgrep
 rsyslog
@@ -111,6 +106,5 @@ wget2
 whois
 wireguard-tools
 wireshark
-xrdp
 xz
 zip
