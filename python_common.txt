@@ -52,3 +52,4 @@ waybackpy
 winacl
 w3lib
 XlsxWriter
+yt-dlp
