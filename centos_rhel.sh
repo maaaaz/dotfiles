@@ -5,6 +5,9 @@ crb enable
 dnf check-update
 dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt")
 
+# some missing packages that might be fixed at some point
+dnf install dc3dd fd-find ioping jhead rclone xrdp
+
 # set permanently the keyboard mapping
 localectl set-keymap fr
 
