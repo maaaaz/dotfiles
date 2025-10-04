@@ -3,7 +3,7 @@ dnf check-update
 dnf install -y epel-release
 crb enable
 dnf check-update
-dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt")
+dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt") || (echo "[!] issue while installing required packages !' && exit 1)
 
 # some missing packages that might be fixed at some point
 dnf install dc3dd fd-find ioping jhead rclone xrdp
