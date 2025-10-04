@@ -1,6 +1,6 @@
 #!/bin/sh
 apt update
-apt install -y $(cat "./debian_ubuntu_packages.txt")
+apt install -y $(cat "./debian_ubuntu_packages.txt") || (echo "[!] issue while installing required packages !" && exit 1)
 
 # packages that do not exist in every debian-based distros (for instance: kali)
 apt install -y mlocate
