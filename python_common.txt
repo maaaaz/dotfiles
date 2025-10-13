@@ -45,6 +45,7 @@ pywerview
 requests
 scrypt
 termcolor
+trnsfr
 urllib3
 validators
 vulners
