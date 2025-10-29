@@ -172,6 +172,7 @@ alias dmesg='dmesg -T'
 alias dkill='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias dps='docker ps'
 alias dlogs='docker logs'
+alias flink='readlink -f'
 
 sstart () { systemctl start "$1" --no-pager -l && systemctl status "$1" --no-pager -l; }
 sstop () { systemctl stop "$1" --no-pager -l && systemctl status "$1" --no-pager -l; }
