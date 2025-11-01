@@ -11,7 +11,7 @@ dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt") || (ech
 dnf install -y dc3dd fd-find ioping jhead rclone xrdp || true
 
 # set permanently the keyboard mapping
-localectl set-keymap fr
+localectl set-keymap fr || true
 
 # upgrade pip and install cool modules
 pip install -q --upgrade pip virtualenvwrapper csvkit 
