@@ -14,7 +14,7 @@ dnf install -y dc3dd fd-find ioping jhead rclone xrdp || true
 localectl set-keymap fr || true
 
 # upgrade pip and install cool modules
-pip install -q --upgrade pip virtualenvwrapper csvkit 
+python -m pip install -q --upgrade pip virtualenvwrapper csvkit 
 
 # customizing bashrc
 echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
