@@ -6,7 +6,7 @@ dnf check-update
 dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt") || (echo "[!] issue while installing required packages !" && exit 1)
 
 # some missing packages that might be fixed at some point
-dnf install dc3dd fd-find ioping jhead rclone xrdp || true
+dnf install -y dc3dd fd-find ioping jhead rclone xrdp || true
 
 # set permanently the keyboard mapping
 localectl set-keymap fr
@@ -17,7 +17,7 @@ echo 'eval "`dircolors`"' >> ~/.bashrc
 echo alias ls='ls $LS_OPTIONS' >> ~/.bashrc
 
 # upgrade pip and install cool modules
-pip install -q --upgrade pip virtualenvwrapper csvkit pyinstaller
+pip install -q --upgrade pip virtualenvwrapper csvkit 
 
 # set up virtualenvwrapper
 grep -i 'workon_home' ~/.bashrc ||  echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc
