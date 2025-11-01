@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-set -e
+set -xe
 
-dnf check-update
+dnf check-update || true
 dnf install -y epel-release
 crb enable
-dnf check-update
+dnf check-update || true
 dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt") || (echo "[!] issue while installing required packages !" && exit 1)
 
 # some missing packages that might be fixed at some point
