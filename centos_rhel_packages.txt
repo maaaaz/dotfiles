@@ -12,7 +12,6 @@ dkms
 dmidecode
 dos2unix
 epel-release
-fd-find
 findutils
 fio
 freerdp
