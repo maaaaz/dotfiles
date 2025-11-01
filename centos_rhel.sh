@@ -15,7 +15,7 @@ dnf install -y plocate xxd wireguard-tools || true
 localectl set-keymap fr || true
 
 # upgrade pip and install cool modules
-python -m pip install -q --upgrade pip virtualenvwrapper csvkit 
+python3 -m pip install -q --upgrade pip virtualenvwrapper csvkit 
 
 # customizing bashrc
 echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
@@ -39,7 +39,6 @@ ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
 # cleaning dnf caches
 dnf clean all
-
 # disabled ununsed services
 SERVICES_TO_DISABLE="rpcbind.socket rpcbind rpcbind.service rpc-statd-notify.service xrdp systemd-resolved.service lvm2-monitor.service mdadm-shutdown.service tor.service lvm2-lvmpolld.socket nfs-client.target remote-fs.target exim4.service exim4-base.timer fstrim.timer lm-sensors.service tftpd-hpa.service postfix chronyd dnsmasq avahi-daemon.socket avahi-daemon.service"
 systemctl stop $SERVICES_TO_DISABLE
