@@ -9,6 +9,7 @@ dnf install -y --best --allowerasing $(cat "./centos_rhel_packages.txt") || (ech
 
 # some missing packages that might be fixed at some point
 dnf install -y dc3dd fd-find ioping jhead rclone xrdp || true
+dnf install -y plocate || true
 
 # set permanently the keyboard mapping
 localectl set-keymap fr || true
