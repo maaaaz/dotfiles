@@ -11,7 +11,8 @@ apt install -y mlocate || true
 localectl set-keymap fr || true
 
 # upgrade pip and install cool modules
-python3 -m pip install -q --upgrade pip csvkit pyinstaller
+virtualenv ~/.virtualenvs/venvcommon
+~/.virtualenvs/venvcommon/bin/pip install -q --upgrade pip csvkit pyinstaller
 
 # customizing bashrc
 echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
