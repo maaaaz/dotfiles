@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -e
+
 dnf check-update
 dnf install -y epel-release
 crb enable
