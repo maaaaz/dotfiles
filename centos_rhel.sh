@@ -13,13 +13,13 @@ dnf install -y dc3dd fd-find ioping jhead rclone xrdp || true
 # set permanently the keyboard mapping
 localectl set-keymap fr
 
+# upgrade pip and install cool modules
+pip install -q --upgrade pip virtualenvwrapper csvkit 
+
 # customizing bashrc
 echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
 echo 'eval "`dircolors`"' >> ~/.bashrc
 echo alias ls='ls $LS_OPTIONS' >> ~/.bashrc
-
-# upgrade pip and install cool modules
-pip install -q --upgrade pip virtualenvwrapper csvkit 
 
 # set up virtualenvwrapper
 grep -i 'workon_home' ~/.bashrc ||  echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc
