@@ -179,7 +179,7 @@ sstop () { systemctl stop "$1" --no-pager -l && systemctl status "$1" --no-pager
 srestart () { systemctl restart "$1" --no-pager -l && systemctl status "$1" --no-pager -l; }
 sstatus () { systemctl status "$1" --no-pager -l; }
 
-export BUILDKIT_COLORS=run=light-green:warning=yellow:error=red:cancel=cyan
+export BUILDKIT_COLORS="run=light-green:warning=yellow:error=red:cancel=cyan"
 
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
