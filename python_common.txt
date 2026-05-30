@@ -21,6 +21,7 @@ ipaddress
 IPy
 itsdangerous
 Jinja2
+lastversion
 ldap3
 ldapdomaindump
 lxml
