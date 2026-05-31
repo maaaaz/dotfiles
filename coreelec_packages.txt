@@ -35,7 +35,6 @@ hdparm
 htop
 iftop
 inetutils
-install
 ioping
 iptables
 jdupes
