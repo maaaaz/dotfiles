@@ -1,7 +1,6 @@
 acl
 archivemount
 ar
-aria2
 aria2-ssl
 atop
 axel
