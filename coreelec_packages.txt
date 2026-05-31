@@ -43,8 +43,11 @@ jdupes
 jhead
 jq
 lame
+ldd
 less
 lftp
+lsblk
+lscpu
 lsd
 lsof
 ltrace
@@ -55,7 +58,8 @@ moreutils
 ncat
 net-tools
 netstat
-nmap
+ncat-ssl
+nmap-ssl
 nmon
 ntfs-3g
 openssh-client
@@ -71,9 +75,11 @@ python3-dev
 python3-pip
 qpdf
 rclone
+rev
 ripgrep
 rsync
 sed
+sftpgo
 smartmontools
 socat
 sshfs
@@ -82,6 +88,7 @@ sudo
 sysfsutils
 tar
 tcpdump
+tree
 tmux
 unrar
 unzip
@@ -89,6 +96,8 @@ usbutils
 vim-full
 wget
 wget-ssl
+whereis
+which
 whois
 xxd
 xz-utils
