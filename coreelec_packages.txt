@@ -1,7 +1,7 @@
 acl
 archivemount
 ar
-aria2-ssl
+aria2-openssl
 atop
 axel
 bash
