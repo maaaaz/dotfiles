@@ -64,6 +64,7 @@ nmon
 ntfs-3g
 openssh-client
 p7zip
+parted
 patch
 pciutils
 perl
