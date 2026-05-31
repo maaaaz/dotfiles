@@ -1,3 +1,4 @@
+7-zip
 acl
 archivemount
 ar
@@ -99,4 +100,7 @@ which
 whois
 xxd
 xz-utils
+zipcmd
+zipmerge
+ziptool
 zstd
