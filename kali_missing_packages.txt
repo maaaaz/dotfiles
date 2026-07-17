@@ -43,7 +43,6 @@ fcrackzip
 fierce
 fiked
 flex
-florence
 foremost
 fragrouter
 fuse3
@@ -92,11 +91,8 @@ padbuster
 paros
 pasco
 pcsc-tools
-pdfsam
-pev
 pff-tools
 postgresql-all
-procyon-decompiler
 protos-sip
 proxychains
 pst-utils
