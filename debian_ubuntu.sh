@@ -16,7 +16,7 @@ virtualenv ~/.virtualenvs/venvcommon
 
 # customizing bashrc
 echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc
-echo 'eval "`dircolors`"' >> ~/.bashrc
+echo 'eval "`dircolors -b`"' >> ~/.bashrc
 echo alias ls='ls $LS_OPTIONS' >> ~/.bashrc
 
 # set up virtualenvwrapper
