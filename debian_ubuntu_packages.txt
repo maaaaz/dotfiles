@@ -8,6 +8,7 @@ atop
 axel
 bat
 bmon
+bsdextrautils
 btop
 build-essential
 bzip2
