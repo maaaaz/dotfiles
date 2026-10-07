@@ -7,13 +7,16 @@ bloodhound
 chardet
 colorama
 csvkit
+curl_cffi
 dissect
 dnspython
+duckdb
 eml_parser
 filemagic
 Flask
 future
 futures
+httpcloak
 humanize
 humanfriendly
 impacket
