@@ -8,6 +8,7 @@ chardet
 colorama
 csvkit
 curl_cffi
+cymruwhoisbulk
 dissect
 dnspython
 duckdb
@@ -18,7 +19,6 @@ future
 futures
 httpcloak
 humanize
-humanfriendly
 impacket
 ipaddress
 IPy
