@@ -19,6 +19,7 @@ future
 futures
 httpcloak
 humanize
+humanfriendly
 impacket
 ipaddress
 IPy
