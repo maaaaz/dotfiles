@@ -9,6 +9,7 @@ colorama
 csvkit
 curl_cffi
 cymruwhoisbulk
+dfir-unfurl
 dissect
 dnspython
 duckdb
